@@ -1,4 +1,5 @@
 # Upserts
+> means update or insert
 
 ```
 POST /products/_update/101

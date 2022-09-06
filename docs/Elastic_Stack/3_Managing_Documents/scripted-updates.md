@@ -1,5 +1,7 @@
 # Scripted updates
 
+`ctx` is short for context
+
 ## Reducing the current value of `in_stock` by one
 
 ```
