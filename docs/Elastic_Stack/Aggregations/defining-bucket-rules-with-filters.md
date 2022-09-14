@@ -2,7 +2,7 @@
 
 ## Placing documents into buckets based on criteria
 
-```
+```JSON
 GET /recipe/_search
 {
   "size": 0,
@@ -29,7 +29,7 @@ GET /recipe/_search
 
 ## Calculate average ratings for buckets
 
-```
+```JSON
 GET /recipe/_search
 {
   "size": 0,

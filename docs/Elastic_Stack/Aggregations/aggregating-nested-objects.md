@@ -1,6 +1,6 @@
 # Aggregating nested objects
 
-```
+```JSON
 GET /department/_search
 {
   "size": 0,
@@ -14,7 +14,7 @@ GET /department/_search
 }
 ```
 
-```
+```JSON
 GET /department/_search
 {
   "size": 0,
