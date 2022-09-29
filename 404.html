@@ -1,0 +1,2217 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="icon" href="/assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.4.0, mkdocs-material-8.5.3">
+    
+    
+      
+        <title>obsidian-mkdocs template</title>
+      
+    
+    
+      <link rel="stylesheet" href="/assets/stylesheets/main.7a952b86.min.css">
+      
+        
+        <link rel="stylesheet" href="/assets/stylesheets/palette.cbb835fc.min.css">
+        
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("/",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="pink" data-md-color-accent="indigo">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="/." title="obsidian-mkdocs template" class="md-header__button md-logo" aria-label="obsidian-mkdocs template" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            obsidian-mkdocs template
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="pink" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
+            </label>
+          
+        
+          
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="pink" data-md-color-accent="blue"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+          
+            <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"/></svg>
+            </label>
+          
+        
+      </form>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="/." title="obsidian-mkdocs template" class="md-nav__button md-logo" aria-label="obsidian-mkdocs template" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    obsidian-mkdocs template
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/." class="md-nav__link">
+        Obsidian Notes
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2">
+          Elastic Stack
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Elastic Stack" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Elastic Stack
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/Elastic_Stack/" class="md-nav__link">
+        Index
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2" type="checkbox" id="__nav_2_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_2">
+          1 Getting Started
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="1 Getting Started" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_2">
+          <span class="md-nav__icon md-icon"></span>
+          1 Getting Started
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/Elastic_Stack/1_Getting_Started/1.1_Inspecting_The_Cluster/" class="md-nav__link">
+        Inspecting the cluster
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/Elastic_Stack/1_Getting_Started/adding-more-nodes-to-the-cluster/" class="md-nav__link">
+        Adding more nodes to the cluster (for development)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/Elastic_Stack/1_Getting_Started/overview-of-node-roles/" class="md-nav__link">
+        Overview of node roles
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/Elastic_Stack/1_Getting_Started/sending-queries-with-curl/" class="md-nav__link">
+        Sending queries with cURL
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/Elastic_Stack/1_Getting_Started/setting-up-elasticsearch-kibana-macos-linux/" class="md-nav__link">
+        Setting up Elasticsearch & Kibana on macOS & Linux
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/Elastic_Stack/1_Getting_Started/setting-up-elasticsearch-kibana-windows/" class="md-nav__link">
+        Setting up Elasticsearch & Kibana on Windows
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/Elastic_Stack/1_Getting_Started/sharding-and-scalability/" class="md-nav__link">
+        Sharding and scalability
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/Elastic_Stack/1_Getting_Started/understanding-replication/" class="md-nav__link">
+        Understanding replication
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_3" type="checkbox" id="__nav_2_3" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_3">
+          3 Managing Documents
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="3 Managing Documents" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_3">
+          <span class="md-nav__icon md-icon"></span>
+          3 Managing Documents
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/Elastic_Stack/3_Managing_Documents/batch-processing/" class="md-nav__link">
+        Batch processing
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/Elastic_Stack/3_Managing_Documents/creating-and-deleting-indices/" class="md-nav__link">
+        Creating & Deleting Indices
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/Elastic_Stack/3_Managing_Documents/delete-by-query/" class="md-nav__link">
+        Delete by query
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/Elastic_Stack/3_Managing_Documents/deleting-documents/" class="md-nav__link">
+        Deleting documents
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/Elastic_Stack/3_Managing_Documents/importing-data-with-curl/" class="md-nav__link">
+        Importing data with cURL
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/Elastic_Stack/3_Managing_Documents/indexing-documents/" class="md-nav__link">
+        Indexing documents
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/Elastic_Stack/3_Managing_Documents/optimistic-concurrency-control/" class="md-nav__link">
+        Optimistic concurrency control
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/Elastic_Stack/3_Managing_Documents/replacing-documents/" class="md-nav__link">
+        Replacing documents
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/Elastic_Stack/3_Managing_Documents/retrieving-documents-by-id/" class="md-nav__link">
+        Retrieving documents by ID
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/Elastic_Stack/3_Managing_Documents/scripted-updates/" class="md-nav__link">
+        Scripted updates
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/Elastic_Stack/3_Managing_Documents/update-by-query/" class="md-nav__link">
+        Update by query
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/Elastic_Stack/3_Managing_Documents/updating-documents/" class="md-nav__link">
+        Updating documents
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/Elastic_Stack/3_Managing_Documents/upserts/" class="md-nav__link">
+        Upserts
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_4" type="checkbox" id="__nav_2_4" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_4">
+          Adding Boolean Logic to Queries
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Adding Boolean Logic to Queries" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_4">
+          <span class="md-nav__icon md-icon"></span>
+          Adding Boolean Logic to Queries
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/Elastic_Stack/Adding%20Boolean%20Logic%20to%20Queries/debugging-bool-queries-with-named-queries/" class="md-nav__link">
+        Debugging `bool` queries with named queries
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/Elastic_Stack/Adding%20Boolean%20Logic%20to%20Queries/how-the-match-query-works/" class="md-nav__link">
+        How the `match` query works
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/Elastic_Stack/Adding%20Boolean%20Logic%20to%20Queries/querying-with-boolean-logic/" class="md-nav__link">
+        Querying with boolean logic
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_5" type="checkbox" id="__nav_2_5" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_5">
+          Aggregations
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Aggregations" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_5">
+          <span class="md-nav__icon md-icon"></span>
+          Aggregations
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/Elastic_Stack/Aggregations/aggregating-nested-objects/" class="md-nav__link">
+        Aggregating nested objects
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/Elastic_Stack/Aggregations/defining-bucket-rules-with-filters/" class="md-nav__link">
+        Defining bucket rules with filters
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/Elastic_Stack/Aggregations/filtering-out-documents/" class="md-nav__link">
+        Filtering out documents
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/Elastic_Stack/Aggregations/global-aggregation/" class="md-nav__link">
+        `global` aggregation
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/Elastic_Stack/Aggregations/histograms/" class="md-nav__link">
+        Histograms
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/Elastic_Stack/Aggregations/introduction-to-aggregations/" class="md-nav__link">
+        Introduction to aggregations
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/Elastic_Stack/Aggregations/introduction-to-bucket-aggregations/" class="md-nav__link">
+        Introduction to bucket aggregations
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/Elastic_Stack/Aggregations/metric-aggregations/" class="md-nav__link">
+        Metric aggregations
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/Elastic_Stack/Aggregations/missing-field-values/" class="md-nav__link">
+        Missing field values
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/Elastic_Stack/Aggregations/nested-aggregations/" class="md-nav__link">
+        Nested aggregations
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/Elastic_Stack/Aggregations/range-aggregations/" class="md-nav__link">
+        Range aggregations
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_6" type="checkbox" id="__nav_2_6" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_6">
+          Controlling Query Results
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Controlling Query Results" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_6">
+          <span class="md-nav__icon md-icon"></span>
+          Controlling Query Results
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/Elastic_Stack/Controlling%20Query%20Results/filters/" class="md-nav__link">
+        Filters
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/Elastic_Stack/Controlling%20Query%20Results/sorting-by-multi-value-fields/" class="md-nav__link">
+        Sorting by multi-value fields
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/Elastic_Stack/Controlling%20Query%20Results/sorting-results/" class="md-nav__link">
+        Sorting results
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/Elastic_Stack/Controlling%20Query%20Results/source-filtering/" class="md-nav__link">
+        Source filtering
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/Elastic_Stack/Controlling%20Query%20Results/specifying-an-offset/" class="md-nav__link">
+        Specifying an offset
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/Elastic_Stack/Controlling%20Query%20Results/specifying-the-result-format/" class="md-nav__link">
+        Specifying the result format
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/Elastic_Stack/Controlling%20Query%20Results/specifying-the-result-size/" class="md-nav__link">
+        Specifying the result size
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_7" type="checkbox" id="__nav_2_7" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_7">
+          Full Text Queries
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Full Text Queries" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_7">
+          <span class="md-nav__icon md-icon"></span>
+          Full Text Queries
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/Elastic_Stack/Full%20Text%20Queries/exercises/" class="md-nav__link">
+        Exercises
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/Elastic_Stack/Full%20Text%20Queries/flexible-matching-with-match-query/" class="md-nav__link">
+        Flexible matching with `match` query
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/Elastic_Stack/Full%20Text%20Queries/introduction-to-full-text-queries/" class="md-nav__link">
+        Introduction to full text queries
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/Elastic_Stack/Full%20Text%20Queries/matching-phrases/" class="md-nav__link">
+        Matching phrases
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/Elastic_Stack/Full%20Text%20Queries/searching-multiple-fields/" class="md-nav__link">
+        Searching multiple fields
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_8" type="checkbox" id="__nav_2_8" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_8">
+          Improving Search Results
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Improving Search Results" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_8">
+          <span class="md-nav__icon md-icon"></span>
+          Improving Search Results
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/Elastic_Stack/Improving%20Search%20Results/adding-synonyms-from-file/" class="md-nav__link">
+        Adding synonyms from file
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/Elastic_Stack/Improving%20Search%20Results/adding-synonyms/" class="md-nav__link">
+        Adding synonyms
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/Elastic_Stack/Improving%20Search%20Results/affecting-relevance-scoring-with-proximity/" class="md-nav__link">
+        Affecting relevance scoring with proximity
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/Elastic_Stack/Improving%20Search%20Results/fuzzy-match-query/" class="md-nav__link">
+        Fuzzy `match` query
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/Elastic_Stack/Improving%20Search%20Results/fuzzy-query/" class="md-nav__link">
+        `fuzzy` query
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/Elastic_Stack/Improving%20Search%20Results/highlighting-matches-in-fields/" class="md-nav__link">
+        Highlighting matches in fields
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/Elastic_Stack/Improving%20Search%20Results/proximity-searches/" class="md-nav__link">
+        Proximity searches
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/Elastic_Stack/Improving%20Search%20Results/stemming/" class="md-nav__link">
+        Stemming
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_9" type="checkbox" id="__nav_2_9" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_9">
+          Introduction to Searching
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Introduction to Searching" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_9">
+          <span class="md-nav__icon md-icon"></span>
+          Introduction to Searching
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/Elastic_Stack/Introduction%20to%20Searching/debugging-unexpected-query-results/" class="md-nav__link">
+        Debugging unexpected query results
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/Elastic_Stack/Introduction%20to%20Searching/full-text-queries-vs-term-level-queries/" class="md-nav__link">
+        Full text queries vs term level queries
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/Elastic_Stack/Introduction%20to%20Searching/introducing-the-query-dsl/" class="md-nav__link">
+        Introducing the Query DSL
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/Elastic_Stack/Introduction%20to%20Searching/searching-with-the-request-uri/" class="md-nav__link">
+        Searching with the request URI
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/Elastic_Stack/Introduction%20to%20Searching/understanding-relevance-scores/" class="md-nav__link">
+        Understanding relevance scores
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_10" type="checkbox" id="__nav_2_10" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_10">
+          Joining Queries
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Joining Queries" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_10">
+          <span class="md-nav__icon md-icon"></span>
+          Joining Queries
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/Elastic_Stack/Joining%20Queries/adding-documents/" class="md-nav__link">
+        Adding documents
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/Elastic_Stack/Joining%20Queries/mapping-document-relationships/" class="md-nav__link">
+        Mapping document relationships
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/Elastic_Stack/Joining%20Queries/multi-level-relations/" class="md-nav__link">
+        Multi-level relations
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/Elastic_Stack/Joining%20Queries/nested-inner-hits/" class="md-nav__link">
+        Nested inner hits
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/Elastic_Stack/Joining%20Queries/parent-child-inner-hits/" class="md-nav__link">
+        Parent/child inner hits
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/Elastic_Stack/Joining%20Queries/querying-by-parent-id/" class="md-nav__link">
+        Querying by parent
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/Elastic_Stack/Joining%20Queries/querying-child-documents-by-parent/" class="md-nav__link">
+        Querying child documents by parent
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/Elastic_Stack/Joining%20Queries/querying-nested-objects/" class="md-nav__link">
+        Querying nested objects
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/Elastic_Stack/Joining%20Queries/querying-parent-by-child-documents/" class="md-nav__link">
+        Querying parent by child documents
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/Elastic_Stack/Joining%20Queries/terms-lookup-mechanism/" class="md-nav__link">
+        Terms lookup mechanism
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_11" type="checkbox" id="__nav_2_11" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_11">
+          Mapping & Analysis
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Mapping & Analysis" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_11">
+          <span class="md-nav__icon md-icon"></span>
+          Mapping & Analysis
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/Elastic_Stack/Mapping%20%26%20Analysis/adding-analyzers-to-existing-indices/" class="md-nav__link">
+        Adding analyzers to existing indices
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/Elastic_Stack/Mapping%20%26%20Analysis/adding-explicit-mappings/" class="md-nav__link">
+        Adding explicit mappings
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/Elastic_Stack/Mapping%20%26%20Analysis/adding-mappings-to-existing-indices/" class="md-nav__link">
+        Adding mappings to existing indices
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/Elastic_Stack/Mapping%20%26%20Analysis/combining-explicit-and-dynamic-mapping/" class="md-nav__link">
+        Combining explicit and dynamic mapping
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/Elastic_Stack/Mapping%20%26%20Analysis/configuring-dynamic-mapping/" class="md-nav__link">
+        Configuring dynamic mapping
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/Elastic_Stack/Mapping%20%26%20Analysis/creating-custom-analyzers/" class="md-nav__link">
+        Creating custom analyzers
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/Elastic_Stack/Mapping%20%26%20Analysis/defining-field-aliases/" class="md-nav__link">
+        Defining field aliases
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/Elastic_Stack/Mapping%20%26%20Analysis/dynamic-templates/" class="md-nav__link">
+        Dynamic templates
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/Elastic_Stack/Mapping%20%26%20Analysis/how-dates-work-in-elasticsearch/" class="md-nav__link">
+        How dates work in Elasticsearch
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/Elastic_Stack/Mapping%20%26%20Analysis/how-the-keyword-data-type-works/" class="md-nav__link">
+        How the `keyword` data type works
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/Elastic_Stack/Mapping%20%26%20Analysis/index-templates/" class="md-nav__link">
+        Index templates
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/Elastic_Stack/Mapping%20%26%20Analysis/multi-field-mappings/" class="md-nav__link">
+        Multi-field mappings
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/Elastic_Stack/Mapping%20%26%20Analysis/reindexing-documents-with-the-reindex-api/" class="md-nav__link">
+        Reindexing documents with the Reindex API
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/Elastic_Stack/Mapping%20%26%20Analysis/retrieving-mappings/" class="md-nav__link">
+        Retrieving mappings
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/Elastic_Stack/Mapping%20%26%20Analysis/understanding-arrays/" class="md-nav__link">
+        Understanding arrays
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/Elastic_Stack/Mapping%20%26%20Analysis/understanding-type-coercion/" class="md-nav__link">
+        Understanding type coercion
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/Elastic_Stack/Mapping%20%26%20Analysis/updating-analyzers/" class="md-nav__link">
+        Updating analyzers
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/Elastic_Stack/Mapping%20%26%20Analysis/updating-existing-mappings/" class="md-nav__link">
+        Updating existing mappings
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/Elastic_Stack/Mapping%20%26%20Analysis/using-dot-notation-in-field-names/" class="md-nav__link">
+        Using dot notation in field names
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/Elastic_Stack/Mapping%20%26%20Analysis/using-the-analyze-api/" class="md-nav__link">
+        Using the Analyze API
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_12" type="checkbox" id="__nav_2_12" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_12">
+          Term Level Queries
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Term Level Queries" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_12">
+          <span class="md-nav__icon md-icon"></span>
+          Term Level Queries
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/Elastic_Stack/Term%20Level%20Queries/exercises/" class="md-nav__link">
+        Exercises
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/Elastic_Stack/Term%20Level%20Queries/matching-based-on-prefixes/" class="md-nav__link">
+        Matching based on prefixes
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/Elastic_Stack/Term%20Level%20Queries/matching-documents-with-non-null-values/" class="md-nav__link">
+        Matching documents with non-null values
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/Elastic_Stack/Term%20Level%20Queries/matching-documents-with-range-values/" class="md-nav__link">
+        Matching documents with range values
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/Elastic_Stack/Term%20Level%20Queries/retrieving-documents-based-on-ids/" class="md-nav__link">
+        Retrieving documents based on IDs
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/Elastic_Stack/Term%20Level%20Queries/searching-for-a-term/" class="md-nav__link">
+        Searching for a term
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/Elastic_Stack/Term%20Level%20Queries/searching-for-multiple-terms/" class="md-nav__link">
+        Searching for multiple terms
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/Elastic_Stack/Term%20Level%20Queries/searching-with-regular-expressions/" class="md-nav__link">
+        Searching with regular expressions
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/Elastic_Stack/Term%20Level%20Queries/searching-with-wildcards/" class="md-nav__link">
+        Searching with wildcards
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/Elastic_Stack/Term%20Level%20Queries/working-with-relative-dates/" class="md-nav__link">
+        Working with relative dates
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3">
+          Elastic Stack Tutorial
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Elastic Stack Tutorial" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Elastic Stack Tutorial
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/Elastic_Stack_Tutorial/Part_1_Intro_to_Elasticsearch_%26_Kibana/" class="md-nav__link">
+        Part 1: Intro to Elasticsearch & Kibana
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/Elastic_Stack_Tutorial/Part_2_Understanding_the_relevance_of_your_search_with_Elasticsearch_and_Kibana/" class="md-nav__link">
+        Part 2 Understanding the relevance of your search with Elasticsearch and Kibana
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/Elastic_Stack_Tutorial/Part_3_Running_full_text_queries_and_combined_queries_with_Elasticsearch_and_Kibana/" class="md-nav__link">
+        Part 3 Running full text queries and combined queries with Elasticsearch and Kibana
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/Elastic_Stack_Tutorial/Part_4_Running_Aggregations_with_Elasticsearch_and_Kibana/" class="md-nav__link">
+        Beginner's Crash Course to Elastic Stack Series
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/Elastic_Stack_Tutorial/Part_5_Understanding_Mapping_with_Elasticsearch_and_Kibana/" class="md-nav__link">
+        Part 5 Understanding Mapping with Elasticsearch and Kibana
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/Elastic_Stack_Tutorial/Untitled/" class="md-nav__link">
+        Untitled
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+  <h1>404 - Not found</h1>
+
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "/", "features": [], "search": "/assets/javascripts/workers/search.5bf1dace.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    
+    
+      <script src="/assets/javascripts/bundle.37e9125f.min.js"></script>
+      
+        <script src="/javascripts/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+        <script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+      
+    
+  </body>
+</html>

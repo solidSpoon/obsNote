@@ -1,0 +1,1064 @@
+
+<!DOCTYPE html>
+
+<html class="no-js" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<link href="../../../assets/images/favicon.png" rel="icon"/>
+<meta content="mkdocs-1.4.0, mkdocs-material-8.5.3" name="generator"/>
+<title>Adding synonyms - obsidian-mkdocs template</title>
+<link href="../../../assets/stylesheets/main.7a952b86.min.css" rel="stylesheet"/>
+<link href="../../../assets/stylesheets/palette.cbb835fc.min.css" rel="stylesheet"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
+<style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+<script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+</head>
+<body data-md-color-accent="indigo" data-md-color-primary="pink" data-md-color-scheme="default" dir="ltr">
+<script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#adding-synonyms">
+          Skip to content
+        </a>
+</div>
+<div data-md-component="announce">
+</div>
+<header class="md-header" data-md-component="header">
+<nav aria-label="Header" class="md-header__inner md-grid">
+<a aria-label="obsidian-mkdocs template" class="md-header__button md-logo" data-md-component="logo" href="../../.." title="obsidian-mkdocs template">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"></path></svg>
+</a>
+<label class="md-header__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"></path></svg>
+</label>
+<div class="md-header__title" data-md-component="header-title">
+<div class="md-header__ellipsis">
+<div class="md-header__topic">
+<span class="md-ellipsis">
+            obsidian-mkdocs template
+          </span>
+</div>
+<div class="md-header__topic" data-md-component="header-topic">
+<span class="md-ellipsis">
+            
+              Adding synonyms
+            
+          </span>
+</div>
+</div>
+</div>
+<form class="md-header__option" data-md-component="palette">
+<input aria-label="Switch to dark mode" class="md-option" data-md-color-accent="indigo" data-md-color-media="(prefers-color-scheme: light)" data-md-color-primary="pink" data-md-color-scheme="default" id="__palette_1" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_2" hidden="" title="Switch to dark mode">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"></path></svg>
+</label>
+<input aria-label="Switch to light mode" class="md-option" data-md-color-accent="blue" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-primary="pink" data-md-color-scheme="slate" id="__palette_2" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_1" hidden="" title="Switch to light mode">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"></path></svg>
+</label>
+</form>
+<label class="md-header__button md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"></path></svg>
+</label>
+<div class="md-search" data-md-component="search" role="dialog">
+<label class="md-search__overlay" for="__search"></label>
+<div class="md-search__inner" role="search">
+<form class="md-search__form" name="search">
+<input aria-label="Search" autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="search-query" name="query" placeholder="Search" required="" spellcheck="false" type="text"/>
+<label class="md-search__icon md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"></path></svg>
+</label>
+<nav aria-label="Search" class="md-search__options">
+<button aria-label="Clear" class="md-search__icon md-icon" tabindex="-1" title="Clear" type="reset">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"></path></svg>
+</button>
+</nav>
+</form>
+<div class="md-search__output">
+<div class="md-search__scrollwrap" data-md-scrollfix="">
+<div class="md-search-result" data-md-component="search-result">
+<div class="md-search-result__meta">
+            Initializing search
+          </div>
+<ol class="md-search-result__list"></ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Navigation" class="md-nav md-nav--primary" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="obsidian-mkdocs template" class="md-nav__button md-logo" data-md-component="logo" href="../../.." title="obsidian-mkdocs template">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"></path></svg>
+</a>
+    obsidian-mkdocs template
+  </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../..">
+        Obsidian Notes
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" id="__nav_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2">
+          Elastic Stack
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Elastic Stack" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_2">
+<span class="md-nav__icon md-icon"></span>
+          Elastic Stack
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../">
+        Index
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2" id="__nav_2_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2_2">
+          1 Getting Started
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="1 Getting Started" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_2_2">
+<span class="md-nav__icon md-icon"></span>
+          1 Getting Started
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../1_Getting_Started/1.1_Inspecting_The_Cluster/">
+        Inspecting the cluster
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../1_Getting_Started/adding-more-nodes-to-the-cluster/">
+        Adding more nodes to the cluster (for development)
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../1_Getting_Started/overview-of-node-roles/">
+        Overview of node roles
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../1_Getting_Started/sending-queries-with-curl/">
+        Sending queries with cURL
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../1_Getting_Started/setting-up-elasticsearch-kibana-macos-linux/">
+        Setting up Elasticsearch &amp; Kibana on macOS &amp; Linux
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../1_Getting_Started/setting-up-elasticsearch-kibana-windows/">
+        Setting up Elasticsearch &amp; Kibana on Windows
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../1_Getting_Started/sharding-and-scalability/">
+        Sharding and scalability
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../1_Getting_Started/understanding-replication/">
+        Understanding replication
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_3" id="__nav_2_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2_3">
+          3 Managing Documents
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="3 Managing Documents" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_2_3">
+<span class="md-nav__icon md-icon"></span>
+          3 Managing Documents
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../3_Managing_Documents/batch-processing/">
+        Batch processing
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../3_Managing_Documents/creating-and-deleting-indices/">
+        Creating &amp; Deleting Indices
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../3_Managing_Documents/delete-by-query/">
+        Delete by query
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../3_Managing_Documents/deleting-documents/">
+        Deleting documents
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../3_Managing_Documents/importing-data-with-curl/">
+        Importing data with cURL
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../3_Managing_Documents/indexing-documents/">
+        Indexing documents
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../3_Managing_Documents/optimistic-concurrency-control/">
+        Optimistic concurrency control
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../3_Managing_Documents/replacing-documents/">
+        Replacing documents
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../3_Managing_Documents/retrieving-documents-by-id/">
+        Retrieving documents by ID
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../3_Managing_Documents/scripted-updates/">
+        Scripted updates
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../3_Managing_Documents/update-by-query/">
+        Update by query
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../3_Managing_Documents/updating-documents/">
+        Updating documents
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../3_Managing_Documents/upserts/">
+        Upserts
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_4" id="__nav_2_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2_4">
+          Adding Boolean Logic to Queries
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Adding Boolean Logic to Queries" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_2_4">
+<span class="md-nav__icon md-icon"></span>
+          Adding Boolean Logic to Queries
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Adding%20Boolean%20Logic%20to%20Queries/debugging-bool-queries-with-named-queries/">
+        Debugging `bool` queries with named queries
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Adding%20Boolean%20Logic%20to%20Queries/how-the-match-query-works/">
+        How the `match` query works
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Adding%20Boolean%20Logic%20to%20Queries/querying-with-boolean-logic/">
+        Querying with boolean logic
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_5" id="__nav_2_5" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2_5">
+          Aggregations
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Aggregations" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_2_5">
+<span class="md-nav__icon md-icon"></span>
+          Aggregations
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Aggregations/aggregating-nested-objects/">
+        Aggregating nested objects
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Aggregations/defining-bucket-rules-with-filters/">
+        Defining bucket rules with filters
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Aggregations/filtering-out-documents/">
+        Filtering out documents
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Aggregations/global-aggregation/">
+        `global` aggregation
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Aggregations/histograms/">
+        Histograms
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Aggregations/introduction-to-aggregations/">
+        Introduction to aggregations
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Aggregations/introduction-to-bucket-aggregations/">
+        Introduction to bucket aggregations
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Aggregations/metric-aggregations/">
+        Metric aggregations
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Aggregations/missing-field-values/">
+        Missing field values
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Aggregations/nested-aggregations/">
+        Nested aggregations
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Aggregations/range-aggregations/">
+        Range aggregations
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_6" id="__nav_2_6" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2_6">
+          Controlling Query Results
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Controlling Query Results" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_2_6">
+<span class="md-nav__icon md-icon"></span>
+          Controlling Query Results
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Controlling%20Query%20Results/filters/">
+        Filters
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Controlling%20Query%20Results/sorting-by-multi-value-fields/">
+        Sorting by multi-value fields
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Controlling%20Query%20Results/sorting-results/">
+        Sorting results
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Controlling%20Query%20Results/source-filtering/">
+        Source filtering
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Controlling%20Query%20Results/specifying-an-offset/">
+        Specifying an offset
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Controlling%20Query%20Results/specifying-the-result-format/">
+        Specifying the result format
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Controlling%20Query%20Results/specifying-the-result-size/">
+        Specifying the result size
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_7" id="__nav_2_7" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2_7">
+          Full Text Queries
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Full Text Queries" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_2_7">
+<span class="md-nav__icon md-icon"></span>
+          Full Text Queries
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Full%20Text%20Queries/exercises/">
+        Exercises
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Full%20Text%20Queries/flexible-matching-with-match-query/">
+        Flexible matching with `match` query
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Full%20Text%20Queries/introduction-to-full-text-queries/">
+        Introduction to full text queries
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Full%20Text%20Queries/matching-phrases/">
+        Matching phrases
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Full%20Text%20Queries/searching-multiple-fields/">
+        Searching multiple fields
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_8" id="__nav_2_8" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2_8">
+          Improving Search Results
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Improving Search Results" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_2_8">
+<span class="md-nav__icon md-icon"></span>
+          Improving Search Results
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../adding-synonyms-from-file/">
+        Adding synonyms from file
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+          Adding synonyms
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
+        Adding synonyms
+      </a>
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#creating-index-with-custom-analyzer">
+    Creating index with custom analyzer
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#testing-the-analyzer-with-synonyms">
+    Testing the analyzer (with synonyms)
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#adding-a-test-document">
+    Adding a test document
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#searching-the-index-for-synonyms">
+    Searching the index for synonyms
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../affecting-relevance-scoring-with-proximity/">
+        Affecting relevance scoring with proximity
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../fuzzy-match-query/">
+        Fuzzy `match` query
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../fuzzy-query/">
+        `fuzzy` query
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../highlighting-matches-in-fields/">
+        Highlighting matches in fields
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../proximity-searches/">
+        Proximity searches
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../stemming/">
+        Stemming
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_9" id="__nav_2_9" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2_9">
+          Introduction to Searching
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Introduction to Searching" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_2_9">
+<span class="md-nav__icon md-icon"></span>
+          Introduction to Searching
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Introduction%20to%20Searching/debugging-unexpected-query-results/">
+        Debugging unexpected query results
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Introduction%20to%20Searching/full-text-queries-vs-term-level-queries/">
+        Full text queries vs term level queries
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Introduction%20to%20Searching/introducing-the-query-dsl/">
+        Introducing the Query DSL
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Introduction%20to%20Searching/searching-with-the-request-uri/">
+        Searching with the request URI
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Introduction%20to%20Searching/understanding-relevance-scores/">
+        Understanding relevance scores
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_10" id="__nav_2_10" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2_10">
+          Joining Queries
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Joining Queries" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_2_10">
+<span class="md-nav__icon md-icon"></span>
+          Joining Queries
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Joining%20Queries/adding-documents/">
+        Adding documents
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Joining%20Queries/mapping-document-relationships/">
+        Mapping document relationships
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Joining%20Queries/multi-level-relations/">
+        Multi-level relations
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Joining%20Queries/nested-inner-hits/">
+        Nested inner hits
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Joining%20Queries/parent-child-inner-hits/">
+        Parent/child inner hits
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Joining%20Queries/querying-by-parent-id/">
+        Querying by parent
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Joining%20Queries/querying-child-documents-by-parent/">
+        Querying child documents by parent
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Joining%20Queries/querying-nested-objects/">
+        Querying nested objects
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Joining%20Queries/querying-parent-by-child-documents/">
+        Querying parent by child documents
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Joining%20Queries/terms-lookup-mechanism/">
+        Terms lookup mechanism
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_11" id="__nav_2_11" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2_11">
+          Mapping &amp; Analysis
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Mapping &amp; Analysis" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_2_11">
+<span class="md-nav__icon md-icon"></span>
+          Mapping &amp; Analysis
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Mapping%20%26%20Analysis/adding-analyzers-to-existing-indices/">
+        Adding analyzers to existing indices
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Mapping%20%26%20Analysis/adding-explicit-mappings/">
+        Adding explicit mappings
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Mapping%20%26%20Analysis/adding-mappings-to-existing-indices/">
+        Adding mappings to existing indices
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Mapping%20%26%20Analysis/combining-explicit-and-dynamic-mapping/">
+        Combining explicit and dynamic mapping
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Mapping%20%26%20Analysis/configuring-dynamic-mapping/">
+        Configuring dynamic mapping
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Mapping%20%26%20Analysis/creating-custom-analyzers/">
+        Creating custom analyzers
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Mapping%20%26%20Analysis/defining-field-aliases/">
+        Defining field aliases
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Mapping%20%26%20Analysis/dynamic-templates/">
+        Dynamic templates
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Mapping%20%26%20Analysis/how-dates-work-in-elasticsearch/">
+        How dates work in Elasticsearch
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Mapping%20%26%20Analysis/how-the-keyword-data-type-works/">
+        How the `keyword` data type works
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Mapping%20%26%20Analysis/index-templates/">
+        Index templates
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Mapping%20%26%20Analysis/multi-field-mappings/">
+        Multi-field mappings
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Mapping%20%26%20Analysis/reindexing-documents-with-the-reindex-api/">
+        Reindexing documents with the Reindex API
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Mapping%20%26%20Analysis/retrieving-mappings/">
+        Retrieving mappings
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Mapping%20%26%20Analysis/understanding-arrays/">
+        Understanding arrays
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Mapping%20%26%20Analysis/understanding-type-coercion/">
+        Understanding type coercion
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Mapping%20%26%20Analysis/updating-analyzers/">
+        Updating analyzers
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Mapping%20%26%20Analysis/updating-existing-mappings/">
+        Updating existing mappings
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Mapping%20%26%20Analysis/using-dot-notation-in-field-names/">
+        Using dot notation in field names
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Mapping%20%26%20Analysis/using-the-analyze-api/">
+        Using the Analyze API
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_12" id="__nav_2_12" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2_12">
+          Term Level Queries
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Term Level Queries" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_2_12">
+<span class="md-nav__icon md-icon"></span>
+          Term Level Queries
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Term%20Level%20Queries/exercises/">
+        Exercises
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Term%20Level%20Queries/matching-based-on-prefixes/">
+        Matching based on prefixes
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Term%20Level%20Queries/matching-documents-with-non-null-values/">
+        Matching documents with non-null values
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Term%20Level%20Queries/matching-documents-with-range-values/">
+        Matching documents with range values
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Term%20Level%20Queries/retrieving-documents-based-on-ids/">
+        Retrieving documents based on IDs
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Term%20Level%20Queries/searching-for-a-term/">
+        Searching for a term
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Term%20Level%20Queries/searching-for-multiple-terms/">
+        Searching for multiple terms
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Term%20Level%20Queries/searching-with-regular-expressions/">
+        Searching with regular expressions
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Term%20Level%20Queries/searching-with-wildcards/">
+        Searching with wildcards
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Term%20Level%20Queries/working-with-relative-dates/">
+        Working with relative dates
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" id="__nav_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3">
+          Elastic Stack Tutorial
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Elastic Stack Tutorial" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_3">
+<span class="md-nav__icon md-icon"></span>
+          Elastic Stack Tutorial
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Elastic_Stack_Tutorial/Part_1_Intro_to_Elasticsearch_%26_Kibana/">
+        Part 1: Intro to Elasticsearch &amp; Kibana
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Elastic_Stack_Tutorial/Part_2_Understanding_the_relevance_of_your_search_with_Elasticsearch_and_Kibana/">
+        Part 2 Understanding the relevance of your search with Elasticsearch and Kibana
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Elastic_Stack_Tutorial/Part_3_Running_full_text_queries_and_combined_queries_with_Elasticsearch_and_Kibana/">
+        Part 3 Running full text queries and combined queries with Elasticsearch and Kibana
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Elastic_Stack_Tutorial/Part_4_Running_Aggregations_with_Elasticsearch_and_Kibana/">
+        Beginner's Crash Course to Elastic Stack Series
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Elastic_Stack_Tutorial/Part_5_Understanding_Mapping_with_Elasticsearch_and_Kibana/">
+        Part 5 Understanding Mapping with Elasticsearch and Kibana
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Elastic_Stack_Tutorial/Untitled/">
+        Untitled
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#creating-index-with-custom-analyzer">
+    Creating index with custom analyzer
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#testing-the-analyzer-with-synonyms">
+    Testing the analyzer (with synonyms)
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#adding-a-test-document">
+    Adding a test document
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#searching-the-index-for-synonyms">
+    Searching the index for synonyms
+  </a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content" data-md-component="content">
+<article class="md-content__inner md-typeset">
+<h1 id="adding-synonyms">Adding synonyms<a class="headerlink" href="#adding-synonyms" title="Permanent link">¶</a></h1>
+<h2 id="creating-index-with-custom-analyzer">Creating index with custom analyzer<a class="headerlink" href="#creating-index-with-custom-analyzer" title="Permanent link">¶</a></h2>
+<pre><code>PUT /synonyms
+{
+  "settings": {
+    "analysis": {
+      "filter": {
+        "synonym_test": {
+          "type": "synonym", 
+          "synonyms": [
+            "awful =&gt; terrible",
+            "awesome =&gt; great, super",
+            "elasticsearch, logstash, kibana =&gt; elk",
+            "weird, strange"
+          ]
+        }
+      },
+      "analyzer": {
+        "my_analyzer": {
+          "tokenizer": "standard",
+          "filter": [
+            "lowercase",
+            "synonym_test"
+          ]
+        }
+      }
+    }
+  },
+  "mappings": {
+    "properties": {
+      "description": {
+        "type": "text",
+        "analyzer": "my_analyzer"
+      }
+    }
+  }
+}
+</code></pre>
+<h2 id="testing-the-analyzer-with-synonyms">Testing the analyzer (with synonyms)<a class="headerlink" href="#testing-the-analyzer-with-synonyms" title="Permanent link">¶</a></h2>
+<pre><code>POST /synonyms/_analyze
+{
+  "analyzer": "my_analyzer",
+  "text": "awesome"
+}
+</code></pre>
+<pre><code>POST /synonyms/_analyze
+{
+  "analyzer": "my_analyzer",
+  "text": "Elasticsearch"
+}
+</code></pre>
+<pre><code>POST /synonyms/_analyze
+{
+  "analyzer": "my_analyzer",
+  "text": "weird"
+}
+</code></pre>
+<pre><code>POST /synonyms/_analyze
+{
+  "analyzer": "my_analyzer",
+  "text": "Elasticsearch is awesome, but can also seem weird sometimes."
+}
+</code></pre>
+<h2 id="adding-a-test-document">Adding a test document<a class="headerlink" href="#adding-a-test-document" title="Permanent link">¶</a></h2>
+<pre><code>POST /synonyms/_doc
+{
+  "description": "Elasticsearch is awesome, but can also seem weird sometimes."
+}
+</code></pre>
+<h2 id="searching-the-index-for-synonyms">Searching the index for synonyms<a class="headerlink" href="#searching-the-index-for-synonyms" title="Permanent link">¶</a></h2>
+<pre><code>GET /synonyms/_search
+{
+  "query": {
+    "match": {
+      "description": "great"
+    }
+  }
+}
+</code></pre>
+<pre><code>GET /synonyms/_search
+{
+  "query": {
+    "match": {
+      "description": "awesome"
+    }
+  }
+}
+</code></pre>
+</article>
+</div>
+</div>
+</main>
+<footer class="md-footer">
+<nav aria-label="Footer" class="md-footer__inner md-grid">
+<a aria-label="Previous: Adding synonyms from file" class="md-footer__link md-footer__link--prev" href="../adding-synonyms-from-file/" rel="prev">
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"></path></svg>
+</div>
+<div class="md-footer__title">
+<div class="md-ellipsis">
+<span class="md-footer__direction">
+                Previous
+              </span>
+              Adding synonyms from file
+            </div>
+</div>
+</a>
+<a aria-label="Next: Affecting relevance scoring with proximity" class="md-footer__link md-footer__link--next" href="../affecting-relevance-scoring-with-proximity/" rel="next">
+<div class="md-footer__title">
+<div class="md-ellipsis">
+<span class="md-footer__direction">
+                Next
+              </span>
+              Affecting relevance scoring with proximity
+            </div>
+</div>
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"></path></svg>
+</div>
+</a>
+</nav>
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" rel="noopener" target="_blank">
+      Material for MkDocs
+    </a>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<div class="md-dialog" data-md-component="dialog">
+<div class="md-dialog__inner md-typeset"></div>
+</div>
+<script id="__config" type="application/json">{"base": "../../..", "features": [], "search": "../../../assets/javascripts/workers/search.5bf1dace.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+<script src="../../../assets/javascripts/bundle.37e9125f.min.js"></script>
+<script src="../../../javascripts/mathjax.js"></script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</body>
+</html>
